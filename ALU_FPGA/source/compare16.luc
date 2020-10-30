@@ -1,0 +1,21 @@
+module compare16 (
+
+    // Comparison module
+    
+    input alufn[6], // ALUFN code. Only ALUFN[2:1] are relevant
+    input z, // Is-0 bit from adder
+    input v, // Overflow bit from adder
+    input n, // Is-negative bit from adder
+    output cmp[16]; // Result. Only cmp[0] is relevant
+    
+  ) {
+
+  always {
+  
+    // Zero all non-LSB
+    cmp[15:1] = b000000000000000;
+    
+    //TOdo
+    
+  }
+}
