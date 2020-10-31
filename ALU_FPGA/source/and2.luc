@@ -1,0 +1,14 @@
+module and2 (
+
+    // Simple 2-input AND gate (for array-based AND operations eg. in multiplier module)
+    
+    input a, // Input a
+    input b, // Input b
+    output s // Output
+    
+  ) {
+
+  always {
+    s = a & b;
+  }
+}

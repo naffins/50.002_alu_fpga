@@ -1,0 +1,76 @@
+module alu (
+
+    // Main ALU module
+    
+    input alufn[6], // ALUFN code
+    input a[16], // Input a
+    input b[16], // Input b
+    output out[16], // Output
+    output z, // Output z (for debugging)
+    output v, // Output v (for debugging)
+    output n // Output n (for debugging)
+    
+  ) {
+  
+  mux4 final_mux[16](.s0(alufn[4]), .s1(alufn[5])); // Final mux: select between ADD/MUL, BOOL, SHIFT/DIV, CMP using ALUFN[5:4]
+  
+  mux2 add_mul_mux[16](.s0(alufn[1])); // Mux between add and mul results, selection using ALUFN[1]
+  mux2 shift_div_mux[16](.s0(alufn[3])); // Mux between shift and div results, selection using ALUFN[3]
+  
+  adder16 adder16_mod; // Adder module (ALUFN: 000000 for ADD, 000001 for SUB)
+  multiplier16 multiplier16_mod; // Multiplier module (ALUFN: 000010 for MUL)
+  boolean16 boolean16_mod; // Boolean module (ALUFN: 011000 for AND, 011110 for OR, 010110 for XOR, 011010 for 'A')
+  shifter16 shifter16_mod; // Shifter module (ALUFN: 100000 for SHL, 100001 for SHR, 100011 SRA)
+  divider16 divider16_mod; // Divider module (ALUFN: 101000 for DIV)
+  compare16 compare16_mod; // Compare mod (ALUFN: 110011 for CMPEQ, 110101 for CMPLT, 110111 for CMPLE)
+  
+  always {
+    
+    // Feed alufn, a and b to adder, and adder output to adder/multiplier mux
+    adder16_mod.alufn = alufn;
+    adder16_mod.a = a;
+    adder16_mod.b = b;
+    add_mul_mux.inp0 = adder16_mod.s;
+    
+    // Feed a and b to multiplier, and multiplier output to adder/multiplier mux
+    multiplier16_mod.a = a;
+    multiplier16_mod.b = b;
+    add_mul_mux.inp1 = multiplier16_mod.mult;
+    
+    // Feed adder/multiplier mux output to final mux
+    final_mux.inp0 = add_mul_mux.out;
+    
+    // Feed alufn, a and b to boolean module, and boolean module output to final mux
+    boolean16_mod.alufn = alufn;
+    boolean16_mod.a = a;
+    boolean16_mod.b = b;
+    final_mux.inp1 = boolean16_mod.bool;
+    
+    // Feed alufn, a and b to shifter, and shifter output to shifter/divider mux
+    shifter16_mod.alufn = alufn;
+    shifter16_mod.a = a;
+    shifter16_mod.b = b;
+    shift_div_mux.inp0 = shifter16_mod.shift;
+    
+    // Feed a and b to divider, and divider output to shifter/divider mux
+    divider16_mod.a = a;
+    divider16_mod.b = b;
+    shift_div_mux.inp1 = divider16_mod.div;
+    
+    // Feed shifter/divider mux output to final mux
+    final_mux.inp2 = shift_div_mux.out;
+    
+    // Feed alufn, z, v and n to compare module, and compare module output to final mux
+    compare16_mod.alufn = alufn;
+    compare16_mod.z = adder16_mod.z;
+    compare16_mod.v = adder16_mod.v;
+    compare16_mod.n = adder16_mod.n;
+    final_mux.inp3 = compare16_mod.cmp;
+    
+    // Route final outputs
+    out = final_mux.out;
+    z = adder16_mod.z;
+    v = adder16_mod.v;
+    n = adder16_mod.n;
+  }
+}

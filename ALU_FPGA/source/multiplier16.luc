@@ -1,0 +1,82 @@
+module multiplier16 (
+    
+    // Multiplier module
+    
+    input a[16], // Input a
+    input b[16], // Input b
+    output mult[16] // Multiplication result
+  ) {
+  
+  and2 and_gates[16][16]; // 16 sets of 16 and2 gates for multiplication with each digit of b
+  basic_add16 add[15]; // 15 basic adders to add the results from all 16 sets of and2 gates
+  
+  always {
+  
+    // Perform AND operations between i most significant bits of a and b[i] for all i between 0 and 15 inclusive
+    and_gates.a[1] = c{a[15:1],1x{b0}};
+    and_gates.b[1] = 16x{b[1]};
+    and_gates.a[2] = c{a[15:2],2x{b0}};
+    and_gates.b[2] = 16x{b[2]};
+    and_gates.a[3] = c{a[15:3],3x{b0}};
+    and_gates.b[3] = 16x{b[3]};
+    and_gates.a[4] = c{a[15:4],4x{b0}};
+    and_gates.b[4] = 16x{b[4]};
+    and_gates.a[5] = c{a[15:5],5x{b0}};
+    and_gates.b[5] = 16x{b[5]};
+    and_gates.a[6] = c{a[15:6],6x{b0}};
+    and_gates.b[6] = 16x{b[6]};
+    and_gates.a[7] = c{a[15:7],7x{b0}};
+    and_gates.b[7] = 16x{b[7]};
+    and_gates.a[8] = c{a[15:8],8x{b0}};
+    and_gates.b[8] = 16x{b[8]};
+    and_gates.a[9] = c{a[15:9],9x{b0}};
+    and_gates.b[9] = 16x{b[9]};
+    and_gates.a[10] = c{a[15:10],10x{b0}};
+    and_gates.b[10] = 16x{b[10]};
+    and_gates.a[11] = c{a[15:11],11x{b0}};
+    and_gates.b[11] = 16x{b[11]};
+    and_gates.a[12] = c{a[15:12],12x{b0}};
+    and_gates.b[12] = 16x{b[12]};
+    and_gates.a[13] = c{a[15:13],13x{b0}};
+    and_gates.b[13] = 16x{b[13]};
+    and_gates.a[14] = c{a[15:14],14x{b0}};
+    and_gates.b[14] = 16x{b[14]};
+    and_gates.a[15] = c{a[15:15],15x{b0}};
+    and_gates.b[15] = 16x{b[15]};
+    
+    // Add all the results from the and_gates, ignoring any carry-outs
+    add.a[0] = and_gates.s[0];
+    add.b[0] = and_gates.s[1];
+    add.a[1] = add.s[0];
+    add.b[1] = and_gates.s[2];
+    add.a[2] = add.s[1];
+    add.b[2] = and_gates.s[3];
+    add.a[3] = add.s[2];
+    add.b[3] = and_gates.s[4];
+    add.a[4] = add.s[3];
+    add.b[4] = and_gates.s[5];
+    add.a[5] = add.s[4];
+    add.b[5] = and_gates.s[6];
+    add.a[6] = add.s[5];
+    add.b[6] = and_gates.s[7];
+    add.a[7] = add.s[6];
+    add.b[7] = and_gates.s[8];
+    add.a[8] = add.s[7];
+    add.b[8] = and_gates.s[9];
+    add.a[9] = add.s[8];
+    add.b[9] = and_gates.s[10];
+    add.a[10] = add.s[9];
+    add.b[10] = and_gates.s[11];
+    add.a[11] = add.s[10];
+    add.b[11] = and_gates.s[12];
+    add.a[12] = add.s[11];
+    add.b[12] = and_gates.s[13];
+    add.a[13] = add.s[12];
+    add.b[13] = and_gates.s[14];
+    add.a[14] = add.s[13];
+    add.b[14] = and_gates.s[15];
+    
+    // Output the least significant 16 bits of the result
+    mult = add.s[14];
+  }
+}

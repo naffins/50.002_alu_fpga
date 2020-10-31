@@ -1,0 +1,28 @@
+module basic_add16 (
+    
+    // Ripple-carry adder for 16 bits, without carry out info
+    // It's like the adder module, except that there's no Z, V, N and you can only add
+    
+    input a[16],  // Input a
+    input b[16],  // Input b
+    output s[16] // Select outputs
+    
+  ) {
+
+  // Array of 16 full adders for ripple-carry addition
+  full_adder fa[16];
+  
+  always {
+    
+    // Feed a and b into the FAs as per normal
+    fa.a = a;
+    fa.b = b;
+    
+    // Feed 0 to the LSB cin and the lower-bit cout to the higher cin inputs
+    fa.cin[0] = b0;
+    fa.cin[15:1] = fa.cout[14:0];
+    
+    // Output the select bits of the FA array
+    s = fa.s;
+  }
+}

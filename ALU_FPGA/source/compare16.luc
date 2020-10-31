@@ -6,16 +6,39 @@ module compare16 (
     input z, // Is-0 bit from adder
     input v, // Overflow bit from adder
     input n, // Is-negative bit from adder
-    output cmp[16]; // Result. Only cmp[0] is relevant
+    output cmp[16] // Result. Only cmp[0] is relevant
     
   ) {
-
+  
+  sig less_than_result; // Node to contain result of A<B
+  
+  mux4 selector_mux; // Mux to allow the 3 compare operations (01: EQ; 10: LESS_THAN, 11: LESS_THAN_OR_EQUAL)
+  
   always {
   
     // Zero all non-LSB
     cmp[15:1] = b000000000000000;
     
-    //TOdo
+    // Route output of mux to CMP module output LSB
+    cmp[0] = selector_mux.out;
     
+    // Route ALUFN2 and ALUFN1 to configure CMP module behaviour
+    selector_mux.s1 = alufn[2];
+    selector_mux.s0 = alufn[1];
+    
+    // Unused input: we default to 0
+    selector_mux.inp0 = b0;
+    
+    // EQ
+    selector_mux.inp1 = z;
+    
+    // LT result: v XOR n
+    less_than_result = v ^ n;
+    
+    // LT
+    selector_mux.inp2 = less_than_result;
+    
+    // LTE: LT result OR z
+    selector_mux.inp3 = less_than_result | z;
   }
 }

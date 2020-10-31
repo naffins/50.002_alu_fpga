@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="ALU_FPGA" board="Alchitry Au" language="Lucid" version="3">
   <files>
-    <src>mux2.luc</src>
+    <src>and2.luc</src>
     <src>full_adder.luc</src>
+    <src>shifter16.luc</src>
+    <src top="true">au_top.luc</src>
+    <src>mux2.luc</src>
+    <src>multiplier16.luc</src>
     <src>mux4.luc</src>
+    <src>divider16.luc</src>
     <src>adder16.luc</src>
     <src>compare16.luc</src>
     <component>reset_conditioner.luc</component>
-    <src top="true">au_top.luc</src>
+    <src>boolean16.luc</src>
+    <src>basic_add16.luc</src>
+    <src>alu.luc</src>
     <constraint lib="true">alchitry.acf</constraint>
     <constraint lib="true">io.acf</constraint>
     <constraint lib="true">au.xdc</constraint>

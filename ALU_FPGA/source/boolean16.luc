@@ -1,0 +1,24 @@
+module boolean16 (
+
+    // Bitwise boolean operations module
+    
+    input alufn[6], // ALUFN input code (only [3:0] is relevant)
+    input a[16], // Input a
+    input b[16], // Input b
+    output bool[16] // Output
+    
+  ) {
+    
+    // Create 16 muxes for each bit, feeding ALUFN[3:0] as the inputs
+    mux4 bool_mux[16](.inp0(alufn[0]), .inp1(alufn[1]), .inp2(alufn[2]), .inp3(alufn[3]));
+  
+  always {
+    
+    // Assign bits of a and b as selectors of the muxes (written with Python(TM))
+    bool_mux.s0 = a;
+    bool_mux.s1 = b;
+		  
+    // Assign output of the muxes to bool
+    bool = bool_mux.out;
+  }
+}

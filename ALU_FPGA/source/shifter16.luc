@@ -1,0 +1,58 @@
+module shifter16 (
+
+    // Bitwise shifter module
+    
+    input alufn[6], // ALUFN code, only [1:0] is relevant
+    input a[16], // Input a
+    input b[16], // Shift amount, only [3:0] is relevant
+    output shift[16] // Shift result
+    
+  ) {
+  
+  sig shift_fill; // Node to contain result for whether vacated positions will be filled by 0s or 1s
+  
+  mux2 reverse_a_first[16](.s0(alufn[0])); // Create muxes to reverse a for left shift prior to variable shifting, assigning ALUFN[0] to indicate left/right shift
+  mux2 cascade_shifter[4][16]; // Create sets of 16 muxes to perform cascade shifting (shift by 1, then by 2, then by 4, then by 8)
+  mux2 reverse_a_last[16](.s0(alufn[0])); // Create muxes to reverse result for left shift after variable shifting, assigning ALUFN[0] to indicate left/right shift
+  
+  
+  always {
+    
+    // Fill vacated positions with 1 only if we are doing SRA (only during which ALUFN[1]==1) and MSB of a is 1. Fill with 0 otherwise
+    shift_fill = alufn[1] & a[15];
+    
+    // Reverse a if ALUFN[0]==0
+    reverse_a_first.inp0 = a[15-:16];
+    reverse_a_first.inp1 = a;
+    
+    // First shift: shift by 1
+    cascade_shifter.s0[0] = 16x{b[0]};
+    cascade_shifter.inp0[0] = reverse_a_first.out;
+    cascade_shifter.inp1[0][15] = shift_fill;
+    cascade_shifter.inp1[0][14:0] = reverse_a_first.out[15:1];
+    
+    // Second shift: shift by 2
+    cascade_shifter.s0[1] = 16x{b[1]};
+    cascade_shifter.inp0[1] = cascade_shifter.out[0];
+    cascade_shifter.inp1[1][15:14] = 2x{shift_fill};
+    cascade_shifter.inp1[1][13:0] = cascade_shifter.out[0][15:2];
+    
+    // Third shift: shift by 4
+    cascade_shifter.s0[2] = 16x{b[2]};
+    cascade_shifter.inp0[2] = cascade_shifter.out[1];
+    cascade_shifter.inp1[2][15:12] = 4x{shift_fill};
+    cascade_shifter.inp1[2][11:0] = cascade_shifter.out[1][15:4];
+    
+    // Fourth shift: shift by 8
+    cascade_shifter.s0[3] = 16x{b[3]};
+    cascade_shifter.inp0[3] = cascade_shifter.out[2];
+    cascade_shifter.inp1[3][15:8] = 8x{shift_fill};
+    cascade_shifter.inp1[3][7:0] = cascade_shifter.out[2][15:8];
+    
+    // Reverse result if ALUFN[0]==0
+    reverse_a_last.inp0 = cascade_shifter.out[3][15-:16];
+    reverse_a_last.inp1 = cascade_shifter.out[3];
+    shift = reverse_a_last.out;
+    
+  }
+}
