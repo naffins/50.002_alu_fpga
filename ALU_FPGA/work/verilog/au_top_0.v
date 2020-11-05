@@ -81,7 +81,7 @@ module au_top_0 (
         M_alu_module_alufn = custom_alufn;
         io_led[16+7-:8] = M_alu_module_out[8+7-:8];
         io_led[8+7-:8] = M_alu_module_out[0+7-:8];
-        io_led[0+3+4-:5] = io_dip[3+4-:5];
+        io_led[0+3+4-:5] = 5'h00;
         io_led[0+2+0-:1] = M_alu_module_z;
         io_led[0+1+0-:1] = M_alu_module_v;
         io_led[0+0+0-:1] = M_alu_module_n;
@@ -98,10 +98,27 @@ module au_top_0 (
         io_led[16+7-:8] = M_autotest_led[16+7-:8];
         io_led[8+7-:8] = M_autotest_led[8+7-:8];
         io_led[0+7-:8] = M_autotest_led[0+7-:8];
-        M_autotest_result = M_alu_module_out;
-        M_autotest_z = M_alu_module_z;
-        M_autotest_v = M_alu_module_v;
-        M_autotest_n = M_alu_module_n;
+        
+        case (io_dip[3+0-:1])
+          1'h0: begin
+            M_autotest_result = M_alu_module_out;
+            M_autotest_z = M_alu_module_z;
+            M_autotest_v = M_alu_module_v;
+            M_autotest_n = M_alu_module_n;
+          end
+          1'h1: begin
+            M_autotest_result = 16'h0000;
+            M_autotest_z = 1'h0;
+            M_autotest_v = 1'h0;
+            M_autotest_n = 1'h0;
+          end
+          default: begin
+            M_autotest_result = M_alu_module_out;
+            M_autotest_z = M_alu_module_z;
+            M_autotest_v = M_alu_module_v;
+            M_autotest_n = M_alu_module_n;
+          end
+        endcase
         custom_out = 16'h0000;
       end
       default: begin
@@ -110,7 +127,7 @@ module au_top_0 (
         M_alu_module_alufn = custom_alufn;
         io_led[16+7-:8] = M_alu_module_out[8+7-:8];
         io_led[8+7-:8] = M_alu_module_out[0+7-:8];
-        io_led[0+3+4-:5] = io_dip[3+4-:5];
+        io_led[0+3+4-:5] = 5'h00;
         io_led[0+2+0-:1] = M_alu_module_z;
         io_led[0+1+0-:1] = M_alu_module_v;
         io_led[0+0+0-:1] = M_alu_module_n;
