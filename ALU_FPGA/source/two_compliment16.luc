@@ -1,0 +1,30 @@
+module two_compliment16 (
+
+    // Module to calculate 2's complement for 16-bit numbers
+    
+    input inp[16], // Input 16-bit number
+    output out[16] // Output 16-bit 
+  
+  ) {
+  
+  // XOR gates to get 1's complement of inp
+  xor2 xorgate[16];
+  
+  // 16-bit FA to add 1 to 1's complement
+  basic_add16 adder;
+  
+  always {
+  
+    // Get 1's complement
+    xorgate.a = inp;
+    xorgate.b = 16hFFFF;
+    
+    // Add 1 to said result
+    adder.a = xorgate.out;
+    adder.b = 16h0001;
+    
+    // Output result
+    out = adder.s;
+    
+  }
+}

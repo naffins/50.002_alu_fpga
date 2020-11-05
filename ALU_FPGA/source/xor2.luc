@@ -1,0 +1,13 @@
+module xor2 (
+  
+    // Simple 2-input XOR gate for divider
+    
+    input a, // Input a
+    input b, // Input b
+    output out // Output
+  ) {
+
+  always {
+    out = a ^ b;
+  }
+}

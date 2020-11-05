@@ -2,8 +2,14 @@
 <project name="ALU_FPGA" board="Alchitry Au" language="Lucid" version="3">
   <files>
     <src>and2.luc</src>
+    <src>two_compliment16.luc</src>
     <src>full_adder.luc</src>
+    <src>autotester.luc</src>
+    <src>xor2.luc</src>
+    <component>counter.luc</component>
     <src>shifter16.luc</src>
+    <src>basic_add6.luc</src>
+    <src>equal16.luc</src>
     <src top="true">au_top.luc</src>
     <src>mux2.luc</src>
     <src>multiplier16.luc</src>
@@ -15,8 +21,7 @@
     <src>boolean16.luc</src>
     <src>basic_add16.luc</src>
     <src>alu.luc</src>
-    <constraint lib="true">alchitry.acf</constraint>
-    <constraint lib="true">io.acf</constraint>
-    <constraint lib="true">au.xdc</constraint>
+    <constraint>custom.acf</constraint>
+    <constraint>custom.xdc</constraint>
   </files>
 </project>

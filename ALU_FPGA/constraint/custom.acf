@@ -1,0 +1,113 @@
+// Custom constraints file
+
+pin clk CLOCK;
+clock clk 100MHz;
+
+pin rst_n RESET;
+
+// Factory default io_led pin allocation
+pin io_led[0][0] B21;
+pin io_led[0][1] B20;
+pin io_led[0][2] B18;
+pin io_led[0][3] B17;
+pin io_led[0][4] B15;
+pin io_led[0][5] B14;
+pin io_led[0][6] B12;
+pin io_led[0][7] B11;
+pin io_led[1][0] B9;
+pin io_led[1][1] B8;
+pin io_led[1][2] B6;
+pin io_led[1][3] B5;
+pin io_led[1][4] B3;
+pin io_led[1][5] B2;
+pin io_led[1][6] A24;
+pin io_led[1][7] A23;
+pin io_led[2][0] A21;
+pin io_led[2][1] A20;
+pin io_led[2][2] A18;
+pin io_led[2][3] A17;
+pin io_led[2][4] A15;
+pin io_led[2][5] A14;
+pin io_led[2][6] A12;
+pin io_led[2][7] A11;
+
+// Factory default io_dip pin allocation
+pin io_dip[0] B30 pulldown;
+pin io_dip[1] B31 pulldown;
+pin io_dip[2] B33 pulldown;
+pin io_dip[3] B34 pulldown;
+pin io_dip[4] B36 pulldown;
+pin io_dip[5] B37 pulldown;
+pin io_dip[6] B39 pulldown;
+pin io_dip[7] B40 pulldown;
+
+// Map input a from A[27,30,33,...,48] to custom_in[0][15:8],
+// A[28,31,34,...,39] to custom_in[0][7:0]
+// In other words, top 2 rows of Bank A (top row for top 8 MSB, bottom row for the 8 LSB)
+pin custom_in[0][15] A27 pulldown;
+pin custom_in[0][14] A30 pulldown;
+pin custom_in[0][13] A33 pulldown;
+pin custom_in[0][12] A36 pulldown;
+pin custom_in[0][11] A39 pulldown;
+pin custom_in[0][10] A42 pulldown;
+pin custom_in[0][9] A45 pulldown;
+pin custom_in[0][8] A48 pulldown;
+pin custom_in[0][7] A28 pulldown;
+pin custom_in[0][6] A31 pulldown;
+pin custom_in[0][5] A34 pulldown;
+pin custom_in[0][4] A37 pulldown;
+pin custom_in[0][3] A40 pulldown;
+pin custom_in[0][2] A43 pulldown;
+pin custom_in[0][1] A46 pulldown;
+pin custom_in[0][0] A49 pulldown;
+
+// Map input b from C[28,31,34,...,39] to custom_in[1][15:8],
+// C[27,30,33,...,48] to custom_in[1][7:0]
+// In other words, top 2 rows of Bank C (top row for top 8 MSB, bottom row for the 8 LSB)
+pin custom_in[1][15] C28 pulldown;
+pin custom_in[1][14] C31 pulldown;
+pin custom_in[1][13] C34 pulldown;
+pin custom_in[1][12] C37 pulldown;
+pin custom_in[1][11] C40 pulldown;
+pin custom_in[1][10] C43 pulldown;
+pin custom_in[1][9] C46 pulldown;
+pin custom_in[1][8] C49 pulldown;
+pin custom_in[1][7] C27 pulldown;
+pin custom_in[1][6] C30 pulldown;
+pin custom_in[1][5] C33 pulldown;
+pin custom_in[1][4] C36 pulldown;
+pin custom_in[1][3] C39 pulldown;
+pin custom_in[1][2] C42 pulldown;
+pin custom_in[1][1] C45 pulldown;
+pin custom_in[1][0] C48 pulldown;
+
+
+// Map ALUFN input from A[9,6,3] to custom_alufn[5:3]
+// A[8,5,2] to custom_alufn[2:0]
+// In other words, map ALUFN to bottom-rightmost 2x3 corner of Bank A (top row for the top 3 MSB, bottom row for the 3 LSB)
+pin custom_alufn[5] A9 pulldown;
+pin custom_alufn[4] A6 pulldown;
+pin custom_alufn[3] A3 pulldown;
+pin custom_alufn[2] A8 pulldown;
+pin custom_alufn[1] A5 pulldown;
+pin custom_alufn[0] A2 pulldown;
+
+// Map the output from B[28,31,34,...,39] to custom_out[15:8],
+// B[24,21,18,...,3] to custom_out[7:0]
+// In other words, map the output to bottom 2 rows of Bank C (top row for the top 8 MSB, bottom row for the 8 MSB)
+pin custom_out[15] C23 pulldown;
+pin custom_out[14] C20 pulldown;
+pin custom_out[13] C17 pulldown;
+pin custom_out[12] C14 pulldown;
+pin custom_out[11] C11 pulldown;
+pin custom_out[10] C8 pulldown;
+pin custom_out[9] C5 pulldown;
+pin custom_out[8] C2 pulldown;
+pin custom_out[7] C24 pulldown;
+pin custom_out[6] C21 pulldown;
+pin custom_out[5] C18 pulldown;
+pin custom_out[4] C15 pulldown;
+pin custom_out[3] C12 pulldown;
+pin custom_out[2] C9 pulldown;
+pin custom_out[1] C6 pulldown;
+pin custom_out[0] C3 pulldown;

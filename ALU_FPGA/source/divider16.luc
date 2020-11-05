@@ -1,13 +1,50 @@
 module divider16 (
     
     // Experimental 16-bit integer division module (DO NOT IMPLEMENT IF MODULE IS NON-FUNCTIONAL)
-    input a[16],
-    input b[16],
-    output div[16]
+    input a[16], // Input a
+    input b[16], // Input b
+    output div[16] // Output
     
   ) {
-
+  
+  // Muxes to switch between 2's complement of a/b/out and a/b/out respectively if needed
+  mux2 a_processed[16];
+  mux2 b_processed[16];
+  mux2 out_process[16];
+  
+  // Module to calculate 2's complements of a,b,out respectively
+  two_compliment16 tc[3];
+  
+  // Node with result of (unsigned a)/(unsigned b)
+  sig unsigned_div[16];
+  
   always {
-    div = a / b;
+    
+    // Calculate 2's complement of a
+    tc.inp[0] = a;
+    
+    // If a is negative, get 2's complement of a, else get a
+    a_processed.s0 = 16x{a[15]};
+    a_processed.inp0 = a;
+    a_processed.inp1 = tc.out[0];
+    
+    // Calculate 2's complement of b
+    tc.inp[1] = b;
+    
+    // If b is negative, get 2's complement of b, else get b
+    b_processed.s0 = 16x{b[15]};
+    b_processed.inp0 = b;
+    b_processed.inp1 = tc.out[1];
+    
+    // Get result of unsigned a divided by unsigned b
+    unsigned_div = a_processed.out / b_processed.out;
+    
+    // If either a or b is positive, get 2's complement of unsigned_div to get answer, else return unsigned_div
+    tc.inp[2] = unsigned_div;
+    out_process.s0 = 16x{a[15] ^ b[15]};
+    out_process.inp0 = unsigned_div;
+    out_process.inp1 = tc.out[2];
+    div = out_process.out;
+    
   }
 }

@@ -59,7 +59,7 @@ module adder16 (
       | s_int[8] | s_int[9] | s_int[10] | s_int[11] | s_int[12] | s_int[13] | s_int[14] | s_int[15]);
     
     // Take v as ((a[15] AND b[15] AND !s[15]) OR (!a[15] AND !b[15] AND s[15]))
-    v = (a[15] & b[15] & (~s_int[15])) | ((~a[15]) & (~b[15]) & s_int[15]);
+    v = (a[15] & b_processed[15] & (~s_int[15])) | ((~a[15]) & (~b_processed[15]) & s_int[15]);
     
     // n is just the MSB of s
     n = s_int[15];

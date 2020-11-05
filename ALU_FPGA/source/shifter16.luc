@@ -22,7 +22,23 @@ module shifter16 (
     shift_fill = alufn[1] & a[15];
     
     // Reverse a if ALUFN[0]==0
-    reverse_a_first.inp0 = a[15-:16];
+    reverse_a_first.inp0[0] = a[15];
+    reverse_a_first.inp0[1] = a[14];
+    reverse_a_first.inp0[2] = a[13];
+    reverse_a_first.inp0[3] = a[12];
+    reverse_a_first.inp0[4] = a[11];
+    reverse_a_first.inp0[5] = a[10];
+    reverse_a_first.inp0[6] = a[9];
+    reverse_a_first.inp0[7] = a[8];
+    reverse_a_first.inp0[8] = a[7];
+    reverse_a_first.inp0[9] = a[6];
+    reverse_a_first.inp0[10] = a[5];
+    reverse_a_first.inp0[11] = a[4];
+    reverse_a_first.inp0[12] = a[3];
+    reverse_a_first.inp0[13] = a[2];
+    reverse_a_first.inp0[14] = a[1];
+    reverse_a_first.inp0[15] = a[0];
+
     reverse_a_first.inp1 = a;
     
     // First shift: shift by 1
@@ -50,9 +66,25 @@ module shifter16 (
     cascade_shifter.inp1[3][7:0] = cascade_shifter.out[2][15:8];
     
     // Reverse result if ALUFN[0]==0
-    reverse_a_last.inp0 = cascade_shifter.out[3][15-:16];
+    reverse_a_last.inp0[0] = cascade_shifter.out[3][15];
+    reverse_a_last.inp0[1] = cascade_shifter.out[3][14];
+    reverse_a_last.inp0[2] = cascade_shifter.out[3][13];
+    reverse_a_last.inp0[3] = cascade_shifter.out[3][12];
+    reverse_a_last.inp0[4] = cascade_shifter.out[3][11];
+    reverse_a_last.inp0[5] = cascade_shifter.out[3][10];
+    reverse_a_last.inp0[6] = cascade_shifter.out[3][9];
+    reverse_a_last.inp0[7] = cascade_shifter.out[3][8];
+    reverse_a_last.inp0[8] = cascade_shifter.out[3][7];
+    reverse_a_last.inp0[9] = cascade_shifter.out[3][6];
+    reverse_a_last.inp0[10] = cascade_shifter.out[3][5];
+    reverse_a_last.inp0[11] = cascade_shifter.out[3][4];
+    reverse_a_last.inp0[12] = cascade_shifter.out[3][3];
+    reverse_a_last.inp0[13] = cascade_shifter.out[3][2];
+    reverse_a_last.inp0[14] = cascade_shifter.out[3][1];
+    reverse_a_last.inp0[15] = cascade_shifter.out[3][0];
     reverse_a_last.inp1 = cascade_shifter.out[3];
-    shift = reverse_a_last.out;
     
+    // Return result
+    shift = reverse_a_last.out;
   }
 }

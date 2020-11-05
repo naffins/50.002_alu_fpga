@@ -2,7 +2,7 @@ module mux4 (
 
     // 2-selector mux
     
-    input inp0, // Input for selector = 00, 01, 10, 11 respectively (from index 0)
+    input inp0, // Inputs for selector = 00, 01, 10, 11 respectively (from index 0)
     input inp1,
     input inp2,
     input inp3,

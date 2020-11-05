@@ -1,0 +1,1840 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Nov  6 00:28:09 2020
+# Process ID: 18076
+# Current directory: C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.runs/synth_1
+# Command line: vivado.exe -log au_top_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source au_top_0.tcl
+# Log file: C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.runs/synth_1/au_top_0.vds
+# Journal file: C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source au_top_0.tcl -notrace
+Command: synth_design -top au_top_0 -part xc7a35tftg256-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tftg256-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15660 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 835.160 ; gain = 233.582
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'au_top_0' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/au_top_0.v:7]
+INFO: [Synth 8-6157] synthesizing module 'alu_1' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/alu_1.v:7]
+INFO: [Synth 8-6157] synthesizing module 'mux4_4' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/mux4_4.v:7]
+INFO: [Synth 8-6157] synthesizing module 'mux2_5' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/mux2_5.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'mux2_5' (1#1) [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/mux2_5.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'mux4_4' (2#1) [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/mux4_4.v:7]
+INFO: [Synth 8-6157] synthesizing module 'adder16_6' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/adder16_6.v:7]
+INFO: [Synth 8-6157] synthesizing module 'full_adder_15' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/full_adder_15.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'full_adder_15' (3#1) [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/full_adder_15.v:7]
+INFO: [Synth 8-226] default block is never used [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/adder16_6.v:57]
+WARNING: [Synth 8-3936] Found unconnected internal register 'cout_reg' and it is trimmed from '16' to '15' bits. [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/adder16_6.v:72]
+INFO: [Synth 8-6155] done synthesizing module 'adder16_6' (4#1) [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/adder16_6.v:7]
+INFO: [Synth 8-6157] synthesizing module 'multiplier16_7' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/multiplier16_7.v:7]
+INFO: [Synth 8-6157] synthesizing module 'and2_16' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/and2_16.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'and2_16' (5#1) [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/and2_16.v:7]
+INFO: [Synth 8-6157] synthesizing module 'basic_add16_17' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/basic_add16_17.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'basic_add16_17' (6#1) [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/basic_add16_17.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'multiplier16_7' (7#1) [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/multiplier16_7.v:7]
+INFO: [Synth 8-6157] synthesizing module 'boolean16_8' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/boolean16_8.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'boolean16_8' (8#1) [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/boolean16_8.v:7]
+INFO: [Synth 8-6157] synthesizing module 'shifter16_9' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/shifter16_9.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'shifter16_9' (9#1) [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/shifter16_9.v:7]
+INFO: [Synth 8-6157] synthesizing module 'divider16_10' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/divider16_10.v:7]
+INFO: [Synth 8-6157] synthesizing module 'two_compliment16_18' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/two_compliment16_18.v:7]
+INFO: [Synth 8-6157] synthesizing module 'xor2_19' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/xor2_19.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'xor2_19' (10#1) [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/xor2_19.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'two_compliment16_18' (11#1) [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/two_compliment16_18.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'divider16_10' (12#1) [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/divider16_10.v:7]
+INFO: [Synth 8-6157] synthesizing module 'compare16_11' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/compare16_11.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'compare16_11' (13#1) [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/compare16_11.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'alu_1' (14#1) [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/alu_1.v:7]
+INFO: [Synth 8-6157] synthesizing module 'autotester_2' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/autotester_2.v:11]
+	Parameter TEST_CASES bound to: 3648'b000000000000000000000000000000000000000000000000000000100000001000000000000000000000000000000000000000000000000100000001000010101111101011001100110011000011111000101110000000001110011001100110000001010111110101100000111010010001000000000010101111101011001100110011001101011111000110001000001011011011010000110101100010001001100000101011101011000000101011000100010010001100111010100011100100101110010000010000000000000000000000000000000000000000000000000100000010111111111111111111111111111111110000000000000001001000010011111101110001100010100001111100111011011111010011000010000101000011111001111110111000110111011011111010011000010011111111111111101111111111111110000000000000001011011000010111110100011000010011111010110001001101000010000011000000100111110101110100110001110110000001000101011001011000101001100011101100010011111010110000001000101011001011110010010000111000111111000010111101111100001111111000011110111110000101111000100001011100111111100101111111000011110001000010111001111111101101110101111110111111011000010110111111011011101000111100111111111100000101000101000010110001111001111111110000100010011001011100010110011001010110100001000100110011101001100101110110110111011011010011010111010011001011111000100101001101110100110010111001011010110001001010011010110111100110001100010010100110010011010101101111001100011000100101001101011011110011000010100000010110010011101001000111111111101000000000000000011100000010001111111111011010111001111001110000000000000000100000110101110011110001110101010111100000000000000000000100001011101010101111011001111110111000000000000000111011100001110011111101110010010100111000100011001111110111000100001100101001110001010110011011001010000010010100111001100011101100110110010111011101011010011111111111011001001100011110111010110100101000000111100111111101110101101001100011010000001111001101011001001110100000000000010000001101000001010000000000101101101100100110000000000000000011101000011001010111000101011110001011110000000000000001011101000011001010111000100000000000000010110010101110001000101000011001010111000111111111111111111001101010001111000101000000000000000000000000000000000010000000000000000000101000000000000000000011111111111111110000000000000000001101000111111111111111111111111111111110000000000000001001101000000000000000000100000000000000010000000000000001000101000000000000000000111111111111111111111111111111111100101000111111111111111100000000000000011111111111111111100101000111111100000111111100000110110000000000000000000001101000010111100010000000000110011000010000000000001110000101000100000000000000011100000110110000000000000000100010101000100000000000000000000000000000011000000000000000001101000100000000000000010000000000000000000000000000001110101000100000000000000011111111111111111000000000000000010110011000000000000000000000000000000000000000000000001100110101000000000000000000000000000000000000000000000000100110111000000000000000000000000000000000000000000000001100110011000010101111101011001100110011000000000000000000000110101000010101111101011001100110011000000000000000000000110111000010101111101011001100110011000000000000000000000110011100000000000000010000000000000000000000000000001100110101100000000000000010000000000000000000000000000000100110111100000000000000010000000000000000000000000000001100110011011011011010000110101100010001000000000000000000011110101011011011010000110101100010001000000000000000000011110111011011011010000110101100010001000000000000000000011110011100011001110101010111010100010000000000000000000001110101100011001110101010111010100010000000000000000001001110111100011001110101010111010100010000000000000000001001 
+INFO: [Synth 8-6157] synthesizing module 'counter_12' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/counter_12.v:14]
+	Parameter SIZE bound to: 1'b1 
+	Parameter DIV bound to: 5'b11100 
+	Parameter TOP bound to: 1'b0 
+	Parameter UP bound to: 1'b1 
+	Parameter MAX_VALUE bound to: 29'b01111111111111111111111111111 
+INFO: [Synth 8-6155] done synthesizing module 'counter_12' (15#1) [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/counter_12.v:14]
+INFO: [Synth 8-6157] synthesizing module 'equal16_13' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/equal16_13.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'equal16_13' (16#1) [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/equal16_13.v:7]
+INFO: [Synth 8-6157] synthesizing module 'basic_add6_14' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/basic_add6_14.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'basic_add6_14' (17#1) [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/basic_add6_14.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'autotester_2' (18#1) [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/autotester_2.v:11]
+INFO: [Synth 8-6157] synthesizing module 'reset_conditioner_3' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/reset_conditioner_3.v:11]
+	Parameter STAGES bound to: 3'b100 
+INFO: [Synth 8-6155] done synthesizing module 'reset_conditioner_3' (19#1) [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/reset_conditioner_3.v:11]
+INFO: [Synth 8-226] default block is never used [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/au_top_0.v:77]
+INFO: [Synth 8-6155] done synthesizing module 'au_top_0' (20#1) [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/au_top_0.v:7]
+WARNING: [Synth 8-3331] design compare16_11 has unconnected port alufn[5]
+WARNING: [Synth 8-3331] design compare16_11 has unconnected port alufn[4]
+WARNING: [Synth 8-3331] design compare16_11 has unconnected port alufn[3]
+WARNING: [Synth 8-3331] design compare16_11 has unconnected port alufn[0]
+WARNING: [Synth 8-3331] design shifter16_9 has unconnected port alufn[5]
+WARNING: [Synth 8-3331] design shifter16_9 has unconnected port alufn[4]
+WARNING: [Synth 8-3331] design shifter16_9 has unconnected port alufn[3]
+WARNING: [Synth 8-3331] design shifter16_9 has unconnected port alufn[2]
+WARNING: [Synth 8-3331] design shifter16_9 has unconnected port b[15]
+WARNING: [Synth 8-3331] design shifter16_9 has unconnected port b[14]
+WARNING: [Synth 8-3331] design shifter16_9 has unconnected port b[13]
+WARNING: [Synth 8-3331] design shifter16_9 has unconnected port b[12]
+WARNING: [Synth 8-3331] design shifter16_9 has unconnected port b[11]
+WARNING: [Synth 8-3331] design shifter16_9 has unconnected port b[10]
+WARNING: [Synth 8-3331] design shifter16_9 has unconnected port b[9]
+WARNING: [Synth 8-3331] design shifter16_9 has unconnected port b[8]
+WARNING: [Synth 8-3331] design shifter16_9 has unconnected port b[7]
+WARNING: [Synth 8-3331] design shifter16_9 has unconnected port b[6]
+WARNING: [Synth 8-3331] design shifter16_9 has unconnected port b[5]
+WARNING: [Synth 8-3331] design shifter16_9 has unconnected port b[4]
+WARNING: [Synth 8-3331] design boolean16_8 has unconnected port alufn[5]
+WARNING: [Synth 8-3331] design boolean16_8 has unconnected port alufn[4]
+WARNING: [Synth 8-3331] design adder16_6 has unconnected port alufn[5]
+WARNING: [Synth 8-3331] design adder16_6 has unconnected port alufn[4]
+WARNING: [Synth 8-3331] design adder16_6 has unconnected port alufn[3]
+WARNING: [Synth 8-3331] design adder16_6 has unconnected port alufn[2]
+WARNING: [Synth 8-3331] design adder16_6 has unconnected port alufn[1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 909.031 ; gain = 307.453
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 909.031 ; gain = 307.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 909.031 ; gain = 307.453
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.078 . Memory (MB): peak = 909.031 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/constraint/custom.xdc]
+Finished Parsing XDC File [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/constraint/custom.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/constraint/custom.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/au_top_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/au_top_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/constraint/custom.xdc]
+CRITICAL WARNING: [Designutils 20-1307] Command '//' is not supported in the xdc constraint file. [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/constraint/custom.xdc:1]
+Finished Parsing XDC File [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/constraint/custom.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/constraint/custom.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/au_top_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/au_top_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1014.406 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 1014.406 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1014.406 ; gain = 412.828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tftg256-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1014.406 ; gain = 412.828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1014.406 ; gain = 412.828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1014.406 ; gain = 412.828
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[2].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[2].and_gates_gen_1[1].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[3].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[3].and_gates_gen_1[1].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[3].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[3].and_gates_gen_1[2].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[4].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[4].and_gates_gen_1[1].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[4].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[4].and_gates_gen_1[2].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[4].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[4].and_gates_gen_1[3].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[5].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[5].and_gates_gen_1[1].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[5].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[5].and_gates_gen_1[2].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[5].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[5].and_gates_gen_1[3].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[5].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[5].and_gates_gen_1[4].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[6].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[6].and_gates_gen_1[1].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[6].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[6].and_gates_gen_1[2].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[6].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[6].and_gates_gen_1[3].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[6].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[6].and_gates_gen_1[4].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[6].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[6].and_gates_gen_1[5].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[7].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[7].and_gates_gen_1[1].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[7].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[7].and_gates_gen_1[2].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[7].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[7].and_gates_gen_1[3].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[7].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[7].and_gates_gen_1[4].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[7].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[7].and_gates_gen_1[5].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[7].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[7].and_gates_gen_1[6].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[8].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[8].and_gates_gen_1[1].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[8].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[8].and_gates_gen_1[2].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[8].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[8].and_gates_gen_1[3].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[8].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[8].and_gates_gen_1[4].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[8].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[8].and_gates_gen_1[5].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[8].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[8].and_gates_gen_1[6].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[8].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[8].and_gates_gen_1[7].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[9].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[9].and_gates_gen_1[1].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[9].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[9].and_gates_gen_1[2].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[9].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[9].and_gates_gen_1[3].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[9].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[9].and_gates_gen_1[4].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[9].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[9].and_gates_gen_1[5].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[9].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[9].and_gates_gen_1[6].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[9].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[9].and_gates_gen_1[7].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[9].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[9].and_gates_gen_1[8].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[10].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[10].and_gates_gen_1[1].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[10].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[10].and_gates_gen_1[2].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[10].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[10].and_gates_gen_1[3].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[10].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[10].and_gates_gen_1[4].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[10].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[10].and_gates_gen_1[5].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[10].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[10].and_gates_gen_1[6].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[10].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[10].and_gates_gen_1[7].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[10].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[10].and_gates_gen_1[8].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[10].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[10].and_gates_gen_1[9].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[11].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[11].and_gates_gen_1[1].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[11].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[11].and_gates_gen_1[2].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[11].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[11].and_gates_gen_1[3].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[11].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[11].and_gates_gen_1[4].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[11].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[11].and_gates_gen_1[5].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[11].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[11].and_gates_gen_1[6].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[11].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[11].and_gates_gen_1[7].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[11].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[11].and_gates_gen_1[8].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[11].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[11].and_gates_gen_1[9].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[11].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[11].and_gates_gen_1[10].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[12].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[12].and_gates_gen_1[1].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[12].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[12].and_gates_gen_1[2].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[12].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[12].and_gates_gen_1[3].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[12].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[12].and_gates_gen_1[4].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[12].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[12].and_gates_gen_1[5].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[12].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[12].and_gates_gen_1[6].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[12].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[12].and_gates_gen_1[7].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[12].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[12].and_gates_gen_1[8].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[12].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[12].and_gates_gen_1[9].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[12].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[12].and_gates_gen_1[10].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[12].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[12].and_gates_gen_1[11].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[13].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[13].and_gates_gen_1[1].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[13].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[13].and_gates_gen_1[2].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[13].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[13].and_gates_gen_1[3].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[13].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[13].and_gates_gen_1[4].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[13].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[13].and_gates_gen_1[5].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[13].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[13].and_gates_gen_1[6].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[13].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[13].and_gates_gen_1[7].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[13].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[13].and_gates_gen_1[8].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[13].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[13].and_gates_gen_1[9].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[13].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[13].and_gates_gen_1[10].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[13].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[13].and_gates_gen_1[11].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[13].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[13].and_gates_gen_1[12].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[1].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[2].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[3].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[4].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[5].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[6].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[7].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[8].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[9].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[10].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[11].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[12].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[14].and_gates_gen_1[13].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[15].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[15].and_gates_gen_1[1].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[15].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[15].and_gates_gen_1[2].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[15].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[15].and_gates_gen_1[3].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[15].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[15].and_gates_gen_1[4].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[15].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[15].and_gates_gen_1[5].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[15].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[15].and_gates_gen_1[6].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[15].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[15].and_gates_gen_1[7].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[15].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[15].and_gates_gen_1[8].and_gates'
+INFO: [Synth 8-223] decloning instance 'alu_module/multiplier16_mod/and_gates_gen_0[15].and_gates_gen_1[0].and_gates' (and2_16) to 'alu_module/multiplier16_mod/and_gates_gen_0[15].and_gates_gen_1[9].and_gates'
+INFO: [Common 17-14] Message 'Synth 8-223' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+
+Report RTL Partitions: 
++------+------------------+------------+----------+
+|      |RTL Partition     |Replication |Instances |
++------+------------------+------------+----------+
+|1     |autotester_2__GB0 |           1|     32781|
+|2     |autotester_2__GB1 |           1|     25619|
+|3     |autotester_2__GB2 |           1|     22946|
+|4     |au_top_0__GC0     |           1|      4461|
++------+------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     16 Bit         XORs := 1     
+	   3 Input      1 Bit         XORs := 310   
+	   2 Input      1 Bit         XORs := 69    
++---Registers : 
+	                6 Bit    Registers := 8     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 5     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module au_top_0 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 4     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module full_adder_15__1 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__2 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__3 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__4 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__5 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__6 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module xor2_19__1 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__2 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__3 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__4 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__5 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__6 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__7 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__8 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__9 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__10 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__11 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__12 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__13 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__14 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__15 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__16 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module autotester_2 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	                6 Bit    Registers := 8     
+Module full_adder_15__23 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__24 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__25 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__26 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__27 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__28 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__29 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__30 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__31 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__32 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__33 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__34 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__35 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__36 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__37 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module adder16_6 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     16 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module full_adder_15__69 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__68 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__67 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__66 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__65 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__64 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__63 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__62 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__61 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__60 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__59 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__58 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__57 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__56 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__55 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__54 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__85 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__84 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__83 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__82 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__81 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__80 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__79 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__78 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__77 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__76 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__75 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__74 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__73 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__72 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__71 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__70 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__101 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__100 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__99 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__98 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__97 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__96 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__95 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__94 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__93 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__92 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__91 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__90 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__89 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__88 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__87 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__86 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__117 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__116 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__115 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__114 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__113 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__112 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__111 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__110 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__109 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__108 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__107 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__106 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__105 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__104 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__103 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__102 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__133 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__132 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__131 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__130 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__129 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__128 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__127 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__126 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__125 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__124 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__123 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__122 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__121 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__120 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__119 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__118 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__149 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__148 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__147 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__146 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__145 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__144 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__143 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__142 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__141 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__140 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__139 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__138 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__137 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__136 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__135 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__134 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__165 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__164 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__163 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__162 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__161 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__160 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__159 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__158 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__157 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__156 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__155 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__154 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__153 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__152 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__151 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__150 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__181 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__180 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__179 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__178 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__177 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__176 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__175 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__174 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__173 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__172 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__171 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__170 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__169 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__168 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__167 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__166 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__197 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__196 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__195 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__194 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__193 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__192 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__191 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__190 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__189 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__188 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__187 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__186 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__185 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__184 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__183 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__182 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__213 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__212 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__211 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__210 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__209 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__208 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__207 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__206 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__205 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__204 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__203 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__202 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__201 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__200 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__199 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__198 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__229 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__228 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__227 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__226 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__225 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__224 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__223 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__222 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__221 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__220 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__219 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__218 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__217 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__216 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__215 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__214 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__245 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__244 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__243 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__242 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__241 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__240 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__239 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__238 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__237 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__236 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__235 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__234 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__233 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__232 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__231 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__230 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__261 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__260 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__259 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__258 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__257 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__256 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__255 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__254 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__253 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__252 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__251 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__250 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__249 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__248 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__247 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__246 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__277 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__276 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__275 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__274 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__273 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__272 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__271 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__270 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__269 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__268 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__267 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__266 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__265 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__264 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__263 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__262 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__7 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__8 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__9 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__10 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__11 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__12 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__13 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__14 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__15 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__16 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__17 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__18 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__19 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__20 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__21 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__22 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__293 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__292 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__291 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__290 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__289 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__288 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__287 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__286 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__285 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__284 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__283 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__282 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__281 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__280 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__279 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__278 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module xor2_19__47 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__46 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__45 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__44 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__43 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__42 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__41 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__40 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__39 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__38 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__37 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__36 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__35 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__34 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__33 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__32 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module full_adder_15__309 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__308 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__307 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__306 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__305 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__304 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__303 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__302 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__301 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__300 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__299 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__298 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__297 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__296 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__295 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__294 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module xor2_19__63 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__62 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__61 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__60 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__59 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__58 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__57 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__56 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__55 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__54 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__53 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__52 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__51 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__50 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__49 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__48 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module full_adder_15__53 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__52 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__51 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__50 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__49 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__48 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__47 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__46 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__45 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__44 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__43 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__42 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__41 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__40 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__39 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module full_adder_15__38 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module xor2_19__17 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__18 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__19 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__20 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__21 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__22 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__23 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__24 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__25 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__26 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__27 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__28 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__29 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__30 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19__31 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module xor2_19 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module divider16_10 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module compare16_11 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module reset_conditioner_3 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'M_state_q_reg[5:0]' into 'M_state_q_reg[5:0]' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/autotester_2.v:125]
+INFO: [Synth 8-4471] merging register 'M_state_q_reg[5:0]' into 'M_state_q_reg[5:0]' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/autotester_2.v:125]
+INFO: [Synth 8-4471] merging register 'M_state_q_reg[5:0]' into 'M_state_q_reg[5:0]' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/autotester_2.v:125]
+INFO: [Synth 8-4471] merging register 'M_state_q_reg[5:0]' into 'M_state_q_reg[5:0]' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/autotester_2.v:125]
+INFO: [Synth 8-4471] merging register 'M_state_q_reg[5:0]' into 'M_state_q_reg[5:0]' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/autotester_2.v:125]

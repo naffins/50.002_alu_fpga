@@ -1,0 +1,163 @@
+module autotester 
+  #(
+    TEST_CASES = {
+      
+      // Total 64 test cases: 7 for ADD/SUB, 5 for MULT, 12 for BOOL, 9 for SHIFT, 16 for DIV, 15 for CMP
+      c{6h0,16h0000,16h0000,16h0000,1b1,1b0,1b0},
+      c{6h1,16h0000,16h0000,16h0000,1b1,1b0,1b0},
+      c{6h1,16h0AFA,16hCCCC,16h3E2E,1b0,1b0,1b0},
+      c{6h1,16hCCCC,16h0AFA,16hC1D2,1b0,1b0,1b1},
+      c{6h0,16h0AFA,16hCCCC,16hD7C6,1b0,1b0,1b1},
+      c{6h1,16h6DA1,16hAC44,16hC15D,1b0,1b1,1b1},
+      c{6h0,16hAC44,16h8CEA,16h392E,1b0,1b1,1b0},
+      c{6h2,16h0000,16h0000,16h0000,1b1,1b0,1b0},
+      c{6h2,16hFFFF,16hFFFF,16h0001,1b0,1b0,1b1},
+      c{6h2,16h7EE3,16h143E,16h76FA,1b0,1b1,1b1},
+      c{6h2,16h143E,16h7EE3,16h76FA,1b0,1b1,1b1},
+      c{6h2,16h7FFF,16h7FFF,16h0001,1b0,1b1,1b1},
+      c{6h18,16h5F46,16h13EB,16h1342,1b0,1b0,1b0},
+      c{6h18,16h13EB,16hA63B,16h022B,1b0,1b0,1b1},
+      c{6h18,16hA63B,16h13EB,16h022B,1b0,1b0,1b1},
+      c{6h1E,16h4871,16hF85E,16hF87F,1b0,1b0,1b0},
+      c{6h1E,16hF85E,16h2173,16hF97F,1b0,1b0,1b0},
+      c{6h1E,16h2173,16hFDBA,16hFDFB,1b0,1b0,1b0},
+      c{6h16,16hFDBA,16h3CFF,16hC145,1b0,1b0,1b0},
+      c{6h16,16h3CFF,16h844C,16hB8B3,1b0,1b0,1b1},
+      c{6h16,16h844C,16hE997,16h6DDB,1b0,1b1,1b0},
+      c{6h1A,16hE997,16hC4A6,16hE997,1b0,1b0,1b1},
+      c{6h1A,16hC4A6,16hB798,16hC4A6,1b0,1b1,1b0},
+      c{6h1A,16hB798,16hC4A6,16hB798,1b0,1b1,1b0},
+      c{6h20,16h593A,16h47FE,16h8000,1b0,1b1,1b1},
+      c{6h20,16h47FE,16hD73C,16hE000,1b0,1b0,1b0},
+      c{6h20,16hD73C,16h755E,16h0000,1b0,1b0,1b0},
+      c{6h21,16h755E,16hCFDC,16h0007,1b0,1b1,1b1},
+      c{6h21,16hCFDC,16h94E2,16h33F7,1b0,1b0,1b0},
+      c{6h21,16h94E2,16hB365,16h04A7,1b0,1b0,1b1},
+      c{6h23,16hB365,16hDD69,16hFFD9,1b0,1b0,1b1},
+      c{6h23,16hDD69,16h40F3,16hFBAD,1b0,1b0,1b1},
+      c{6h23,16h40F3,16h593A,16h0010,1b0,1b0,1b1},
+      c{6h28,16h2801,16h6D93,16h0000,1b0,1b1,1b1},
+      c{6h28,16h6571,16h5E2F,16h0001,1b0,1b1,1b1},
+      c{6h28,16h6571,16h0001,16h6571,1b0,1b0,1b0},
+      c{6h28,16h6571,16hFFFF,16h9A8F,1b0,1b0,1b0},
+      c{6h28,16h0000,16h0001,16h0000,1b0,1b0,1b0},
+      c{6h28,16h0000,16hFFFF,16h0000,1b0,1b0,1b1},
+      c{6h28,16hFFFF,16hFFFF,16h0001,1b0,1b0,1b1},
+      c{6h28,16h0001,16h0001,16h0001,1b0,1b0,1b0},
+      c{6h28,16h0001,16hFFFF,16hFFFF,1b1,1b0,1b0},
+      c{6h28,16hFFFF,16h0001,16hFFFF,1b1,1b0,1b0},
+      c{6h28,16hFE0F,16hE0D8,16h0000,1b0,1b0,1b1},
+      c{6h28,16h5E20,16h0661,16h000E,1b0,1b0,1b0},
+      c{6h28,16h8000,16hE0D8,16h0004,1b0,1b1,1b0},
+      c{6h28,16h8000,16h0001,16h8000,1b0,1b0,1b1},
+      c{6h28,16h8000,16h8000,16h0001,1b1,1b1,1b0},
+      c{6h28,16h8000,16hFFFF,16h8000,1b0,1b1,1b0},
+      c{6h33,16h0000,16h0000,16h0001,1b1,1b0,1b0},
+      c{6h35,16h0000,16h0000,16h0000,1b1,1b0,1b0},
+      c{6h37,16h0000,16h0000,16h0001,1b1,1b0,1b0},
+      c{6h33,16h0AFA,16hCCCC,16h0000,1b0,1b0,1b0},
+      c{6h35,16h0AFA,16hCCCC,16h0000,1b0,1b0,1b0},
+      c{6h37,16h0AFA,16hCCCC,16h0000,1b0,1b0,1b0},
+      c{6h33,16h8000,16h8000,16h0001,1b1,1b0,1b0},
+      c{6h35,16h8000,16h8000,16h0000,1b1,1b0,1b0},
+      c{6h37,16h8000,16h8000,16h0001,1b1,1b0,1b0},
+      c{6h33,16h6DA1,16hAC44,16h0000,1b0,1b1,1b1},
+      c{6h35,16h6DA1,16hAC44,16h0000,1b0,1b1,1b1},
+      c{6h37,16h6DA1,16hAC44,16h0000,1b0,1b1,1b1},
+      c{6h33,16h8CEA,16hBA88,16h0000,1b0,1b0,1b1},
+      c{6h35,16h8CEA,16hBA88,16h0001,1b0,1b0,1b1},
+      c{6h37,16h8CEA,16hBA88,16h0001,1b0,1b0,1b1}
+    }
+  )
+  (
+    input clk,  // Clock
+    input rst,  // Reset
+    input result[16], // Result from ALU
+    input z, // z result from ALU
+    input v, // v result from ALU
+    input n, // n result from ALU
+    input switches[3], // IO_DIP[0][2:1] to toggle between test values, and IO_DIP[0][0] to enable autotester
+    output alufn[6], // Simulated ALUFN to ALU
+    output a[16], // Simulated a to ALU
+    output b[16], // Simulated b to ALU
+    output led[24] // What to display on LED on IO board during autotesting
+  ) {
+
+  // Define a slower clock (2^29 times slower than normal clock) to toggle between states visibly (yes, I plagiarized this from my own MHP code)
+  counter slowclock(#SIZE(1),#DIV(28), .clk(clk), .rst(rst));
+  
+  // DFF to cycle between test inputs
+  dff state[6](.clk(slowclock.value), .rst(rst));
+  
+  // Result checker
+  equal16 result_chk;
+  
+  // Mux to vary LED[2:1] output
+  mux4 led_select[16];
+  
+  // Adder to increment state value
+  basic_add6 adder6;
+  
+  // Intermediate nodes with values to display on LED (only 1 out of the 4 will be displayed)
+  sig alufn_and_zvn[16], // For ALUFN, Z, V and N display mode
+      out_a[16], // For a display mode
+      out_b[16], // For b display mode
+      in_result[16]; // For result display mode
+  
+  // Intermediate nodes to indicate whether result, z, v and n are correct
+  sig result_correct, z_correct, v_correct, n_correct;
+  
+  
+  always {
+    // Lowest 6 bits show current test case index
+    led[5:0] = state.q;
+    
+    // For ALUFN, Z, V and N display mode, turn off LED[2][1:0] and LED[1][4:0]
+    alufn_and_zvn[9:8] = 2b00;
+    alufn_and_zvn[4:0] = 5b00000;
+    
+    // Assign LED[2] and LED[1] candidate outputs (for simulated inputs)
+    alufn_and_zvn[15:10] = TEST_CASES[state.q][56:51]; // Assign ALUFN to LED[2][7:2]
+    out_a = TEST_CASES[state.q][50:35];
+    out_b = TEST_CASES[state.q][34:19];
+    
+    // Simulate ALU inputs
+    alufn = TEST_CASES[state.q][56:51];
+    a = TEST_CASES[state.q][50:35];
+    b = TEST_CASES[state.q][34:19];
+    
+    // Assign LED[2] and LED[1] candidate outputs (for received inputs)
+    alufn_and_zvn[7:5] = c{z,v,n};
+    in_result = result;
+    
+    // Check result correctness
+    result_chk.a = result;
+    result_chk.b = TEST_CASES[state.q][18:3];
+    result_correct = result_chk.result;
+    
+    // Check z, v, n correctness
+    z_correct = ~(z^TEST_CASES[state.q][2]);
+    v_correct = ~(v^TEST_CASES[state.q][1]);
+    n_correct = ~(n^TEST_CASES[state.q][0]);
+    
+    // Show result correctness on LED[0][7] and ZVN correctness on LED[0][6]
+    led[7] = result_correct;
+    led[6] = z_correct & v_correct & n_correct;
+    
+    // Switch what appears on LED[2:1] based on the switches
+    // 00: ALUFN and ZVN, 01: a, 10: b, 11: result
+    led_select.s0 = 16x{switches[1]};
+    led_select.s1 = 16x{switches[2]};
+    led_select.inp0 = alufn_and_zvn;
+    led_select.inp1 = out_a;
+    led_select.inp2 = out_b;
+    led_select.inp3 = in_result;
+    led[23:8] = led_select.out;
+    
+    // Move on to next test ONLY if result, Z, V, N are all n_correct and autotester is active
+    adder6.a = state.q;
+    adder6.b[5:1] = 5b00000;
+    adder6.b[0] = result_correct & z_correct & v_correct & n_correct & switches[0];
+    state.d = adder6.s;
+  }
+}

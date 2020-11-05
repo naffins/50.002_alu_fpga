@@ -1,0 +1,25 @@
+module equal16 (
+  
+    // Module to check if 2 16-bit inputs match, for autotester
+    
+    input a[16],  // Input a
+    input b[16],  // Input b
+    output result // 1 for true, 0 for false
+  ) {
+
+  // XOR gates to check bitwise equality
+  xor2 xorgates[16];
+  
+  always {
+  
+    // Assign both inputs to the XOR gates
+    xorgates.a = a;
+    xorgates.b = b;
+    
+    // This is like z of the adder module of the ALU
+    result = ~(xorgates.out[0] | xorgates.out[1] | xorgates.out[2] | xorgates.out[3] | 
+               xorgates.out[4] | xorgates.out[5] | xorgates.out[6] | xorgates.out[7] | 
+               xorgates.out[8] | xorgates.out[9] | xorgates.out[10] | xorgates.out[11] | 
+               xorgates.out[12] | xorgates.out[13] | xorgates.out[14] | xorgates.out[15]);
+  }
+}
