@@ -1,12 +1,12 @@
-##16-bit ALU FPGA implementation
+# 16-bit ALU FPGA implementation
 
-###Introduction
+### Introduction
 
 This GitHub repository details code for the implementation of a 16-bit Arithmetic Logic Unit (ALU) on an Alchitry Au FPGA with Br and Io boards attached. All code is done in Lucid.
 
 The ALU normally takes in 2 16-bits signed integer inputs A and B, and returns a signed output RESULT. The operation performed depends on a 6-bit ALUFN code passed to the ALU. It consists of a fully combinational manual IO mode for normal operation, and an automatic self-test mode to check ALU functionality.
 
-###Supported operations
+### Supported operations
 
 The ALU supports the following operations as listen in the table below. Note that the inputs are treated as signed integers, with negative values represented using 2's complement.
 
@@ -29,7 +29,7 @@ The ALU supports the following operations as listen in the table below. Note tha
 
 Note that ALUFN codes listed here are in binary.
 
-###Setup
+### Setup
 
 Referring to the Br board reference in https://drive.google.com/file/d/1T3Vth8YpqDq1iOcPEW6TWjwVH0-h-59C/view,
 
@@ -40,17 +40,17 @@ Referring to the Br board reference in https://drive.google.com/file/d/1T3Vth8Yp
 
 As a precaution, you may also wish to turn off all switches on the 2 leftmost arrays of the Io board.
 
-####Usage
+### Usage
 
 The rightmost switch in the rightmost array of the Io board allows toggling between normal operation and autotesting mode. Turn on to enable autotesting.
 
-#####Normal operation
+#### Normal operation
 
 Under normal operation, no operation on the Io board is needed: the ALU takes external ALUFN, A and B input, and outputs the corresponding RESULT output through the Br board.
 
 Additionally, the ALU illustrates the RESULT output using the 2 leftmost LED arrays, and the Z, V, and N result of the ALU's adder module using the 3 rightmost LEDs of the rightmost array.
 
-#####Autotesting
+#### Autotesting
 
 In autotesting mode, the FPGA cycles through 64 different test cases, proceeding onto the next one only if RESULT, Z, V and N output of the ALU are correct.
 
