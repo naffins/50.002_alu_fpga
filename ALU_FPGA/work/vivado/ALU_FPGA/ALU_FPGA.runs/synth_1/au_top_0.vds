@@ -1838,3 +1838,192 @@ INFO: [Synth 8-4471] merging register 'M_state_q_reg[5:0]' into 'M_state_q_reg[5
 INFO: [Synth 8-4471] merging register 'M_state_q_reg[5:0]' into 'M_state_q_reg[5:0]' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/autotester_2.v:125]
 INFO: [Synth 8-4471] merging register 'M_state_q_reg[5:0]' into 'M_state_q_reg[5:0]' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/autotester_2.v:125]
 INFO: [Synth 8-4471] merging register 'M_state_q_reg[5:0]' into 'M_state_q_reg[5:0]' [C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.srcs/sources_1/imports/verilog/autotester_2.v:125]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:08:45 ; elapsed = 00:09:26 . Memory (MB): peak = 1263.539 ; gain = 661.961
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+------------------+------------+----------+
+|      |RTL Partition     |Replication |Instances |
++------+------------------+------------+----------+
+|1     |autotester_2__GB0 |           1|      2100|
+|2     |autotester_2__GB1 |           1|      3373|
+|3     |autotester_2__GB2 |           1|       801|
+|4     |au_top_0__GC0     |           1|      2390|
++------+------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:08:54 ; elapsed = 00:09:37 . Memory (MB): peak = 1263.539 ; gain = 661.961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:08:54 ; elapsed = 00:09:37 . Memory (MB): peak = 1263.539 ; gain = 661.961
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+------------------+------------+----------+
+|      |RTL Partition     |Replication |Instances |
++------+------------------+------------+----------+
+|1     |autotester_2__GB0 |           1|      2100|
+|2     |autotester_2__GB1 |           1|      3373|
+|3     |autotester_2__GB2 |           1|       801|
+|4     |au_top_0__GC0     |           1|      2390|
++------+------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'autotest/M_state_q_reg[3]__1' (FDR) to 'autotest/M_state_q_reg[3]__0'
+INFO: [Synth 8-3886] merging instance 'autotest/M_state_q_reg[4]__1' (FDR) to 'autotest/M_state_q_reg[4]__0'
+INFO: [Synth 8-3886] merging instance 'autotest/M_state_q_reg[5]__1' (FDR) to 'autotest/M_state_q_reg[5]__0'
+INFO: [Synth 8-3886] merging instance 'autotest/M_state_q_reg[3]__0' (FDR) to 'autotest/M_state_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'autotest/M_state_q_reg[4]__0' (FDR) to 'autotest/M_state_q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'autotest/M_state_q_reg[5]__0' (FDR) to 'autotest/M_state_q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'autotest/M_state_q_reg[2]__1' (FDR) to 'autotest/M_state_q_reg[2]__0'
+INFO: [Synth 8-3886] merging instance 'autotest/M_state_q_reg[1]__1' (FDR) to 'autotest/M_state_q_reg[1]__0'
+INFO: [Synth 8-3886] merging instance 'autotest/M_state_q_reg[2]' (FDR) to 'autotest/M_state_q_reg[2]__0'
+INFO: [Synth 8-3886] merging instance 'autotest/M_state_q_reg[1]__0' (FDR) to 'autotest/M_state_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'autotest/M_state_q_reg[0]__1' (FDR) to 'autotest/M_state_q_reg[0]__0'
+INFO: [Synth 8-3886] merging instance 'autotest/M_state_q_reg[0]' (FDR) to 'autotest/M_state_q_reg[0]__0'
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:08:56 ; elapsed = 00:09:40 . Memory (MB): peak = 1263.539 ; gain = 661.961
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:09:02 ; elapsed = 00:09:47 . Memory (MB): peak = 1263.539 ; gain = 661.961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:09:02 ; elapsed = 00:09:47 . Memory (MB): peak = 1263.539 ; gain = 661.961
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:09:02 ; elapsed = 00:09:47 . Memory (MB): peak = 1263.539 ; gain = 661.961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:09:02 ; elapsed = 00:09:47 . Memory (MB): peak = 1263.539 ; gain = 661.961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:09:03 ; elapsed = 00:09:47 . Memory (MB): peak = 1263.539 ; gain = 661.961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:09:03 ; elapsed = 00:09:47 . Memory (MB): peak = 1263.539 ; gain = 661.961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |   115|
+|3     |LUT1   |    14|
+|4     |LUT2   |   223|
+|5     |LUT3   |   169|
+|6     |LUT4   |    86|
+|7     |LUT5   |   356|
+|8     |LUT6   |  1071|
+|9     |MUXF7  |   131|
+|10    |MUXF8  |    25|
+|11    |FDRE   |    38|
+|12    |FDSE   |     4|
+|13    |IBUF   |    49|
+|14    |OBUF   |    41|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------------+--------------------+------+
+|      |Instance          |Module              |Cells |
++------+------------------+--------------------+------+
+|1     |top               |                    |  2323|
+|2     |  alu_module      |alu_1               |    16|
+|3     |    divider16_mod |divider16_10        |    16|
+|4     |  autotest        |autotester_2        |  2208|
+|5     |    adder6        |basic_add6_14       |    10|
+|6     |    result_chk    |equal16_13          |  1400|
+|7     |    slowclock     |counter_12          |    38|
+|8     |  reset_cond      |reset_conditioner_3 |     5|
++------+------------------+--------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:09:03 ; elapsed = 00:09:48 . Memory (MB): peak = 1263.539 ; gain = 661.961
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:08:52 ; elapsed = 00:09:43 . Memory (MB): peak = 1263.539 ; gain = 556.586
+Synthesis Optimization Complete : Time (s): cpu = 00:09:03 ; elapsed = 00:09:48 . Memory (MB): peak = 1263.539 ; gain = 661.961
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 1263.539 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 271 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1263.539 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+173 Infos, 28 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:09:15 ; elapsed = 00:10:09 . Memory (MB): peak = 1263.539 ; gain = 958.309
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1263.539 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/USER/Documents/GitHub/naffins/50.002_alu_fpga/ALU_FPGA/work/vivado/ALU_FPGA/ALU_FPGA.runs/synth_1/au_top_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file au_top_0_utilization_synth.rpt -pb au_top_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Nov  6 00:38:38 2020...
